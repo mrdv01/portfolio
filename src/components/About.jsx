@@ -32,38 +32,41 @@ export const About = () => {
     <section
       id="about"
       className="
-       
-        flex flex-col md:flex-row          /* Stack on mobile, side-by-side on md+ screens */
+        flex flex-col md:flex-row
         items-center justify-center
         gap-10 md:gap-10
-        px-12 py-20                         /* padding all around */
-        text-center md:text-left           /* center on mobile, left-align on desktop */            
-      "
+        px-12 py-20
+        bg-white text-gray-800
+        "
     >
       {/* LEFT SIDE — Text content */}
       <div className="flex-1">
         {/* Animated heading */}
         <h1
           ref={greetingRef}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ffffff] mb-6 overflow-hidden"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 overflow-hidden"
+          style={{
+            color: "rgb(17,24,39)",
+          }} /* explicit dark for animation chars */
         >
-          Hi all, I'm Deepak 👋
+          Hi all, I'm Deepak Verma
         </h1>
 
         {/* Description */}
-        <p className="max-w-2xl text-slate-700 text-lg sm:text-xl leading-relaxed">
+        <p className="max-w-2xl text-gray-700 text-lg sm:text-xl leading-relaxed">
           I’m a{" "}
-          <span className="font-semibold text-[#cab2dd]">
-            Full Stack Software Developer 🚀
+          <span className="font-semibold text-blue-600">
+            Full Stack Software Developer
           </span>{" "}
           pursuing B.Tech in Computer Science from{" "}
-          <span className="font-semibold">IIIT Bhopal</span>, passionate about
-          building modern, intelligent web applications. I love transforming
-          ideas into scalable, user-focused products with technologies like{" "}
-          <span className="font-semibold">React.js</span>,{" "}
-          <span className="font-semibold">Node.js</span>,{" "}
-          <span className="font-semibold">Express.js</span>, and{" "}
-          <span className="font-semibold">MongoDB</span>.
+          <span className="font-semibold text-gray-800">IIIT Bhopal</span>,
+          passionate about building modern, intelligent web applications. I love
+          transforming ideas into scalable, user-focused products with
+          technologies like{" "}
+          <span className="font-semibold text-blue-600">React.js</span>,{" "}
+          <span className="font-semibold text-blue-600">Node.js</span>,{" "}
+          <span className="font-semibold text-blue-600">Express.js</span>, and{" "}
+          <span className="font-semibold text-blue-600">MongoDB</span>.
           <br />
         </p>
       </div>

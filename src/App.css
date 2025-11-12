@@ -4,9 +4,10 @@
 
 body {
   @apply font-sans;
-  font-family: "Playwrite DE SAS", cursive, system-ui, sans-serif;
-  background: linear-gradient(to bottom, #9d4edd, #9647d7, #69289e);
-  color: #ffffff;
+  font-family: system-ui, sans-serif;
+  /* background: linear-gradient(to bottom, #9d4edd, #9647d7, #69289e); */
+  background-color: #ffffff;
+  color: #000000;
 }
 
 html {

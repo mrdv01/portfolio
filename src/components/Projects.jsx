@@ -28,9 +28,9 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 text-white">
+    <section id="projects" className="py-20 bg-white text-gray-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-[#f3d1ff] to-[#ffffff] text-transparent bg-clip-text">
+        <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
           Projects
         </h2>
 
@@ -38,41 +38,53 @@ const Projects = () => {
           {projects.map((p, i) => (
             <div
               key={i}
-              className="relative group w-full sm:w-80 p-6 rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20
-                         shadow-lg hover:shadow-[0_0_25px_rgba(157,78,221,0.6)]
-                         transition-all duration-500 hover:scale-105 hover:border-[#9d4edd]/60"
+              className="relative group w-full sm:w-80 p-6 rounded-2xl
+                         bg-gradient-to-br from-gray-50 to-white border border-gray-200
+                         shadow-md hover:shadow-[0_10px_30px_rgba(59,130,246,0.12)]
+                         transition-all duration-500 hover:scale-105 hover:border-blue-200"
             >
-              {/* Glass overlay */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#9d4edd]/40 to-transparent opacity-25 group-hover:opacity-40 transition-opacity"></div>
+              {/* Subtle overlay for hover emphasis */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-50/0 to-transparent opacity-0 group-hover:opacity-30 transition-opacity pointer-events-none"></div>
 
               <div className="relative z-10">
-                <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
-                <p className="text-sm text-white/80 mb-6 line-clamp-4">
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                  {p.title}
+                </h3>
+                <p className="text-sm text-gray-600 mb-6 line-clamp-4">
                   {p.description}
                 </p>
 
-                <div className="flex items-center justify-between">
-                  {p.live && (
-                    <a
-                      href={p.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-[#9d4edd]/80 hover:bg-[#9d4edd] px-3 py-2 rounded-lg text-sm font-medium transition"
-                    >
-                      <ExternalLink size={16} /> Live Demo
-                    </a>
-                  )}
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex-1 flex gap-3">
+                    {p.live && (
+                      <a
+                        href={p.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium
+                                   bg-blue-600 text-white hover:bg-blue-700 transition"
+                      >
+                        <ExternalLink size={16} /> Live Demo
+                      </a>
+                    )}
 
-                  {p.github && (
-                    <a
-                      href={p.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-3 py-2 rounded-lg text-sm font-medium transition"
-                    >
-                      <Github size={16} /> GitHub
-                    </a>
-                  )}
+                    {p.github && (
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium
+                                   bg-gray-100 text-gray-800 hover:bg-gray-200 transition"
+                      >
+                        <Github size={16} /> GitHub
+                      </a>
+                    )}
+                  </div>
+
+                  {/* small indicator / chevron or tag could go here if you want */}
+                  <div className="text-xs text-gray-400">
+                    {p.live ? "Deployed" : "Code only"}
+                  </div>
                 </div>
               </div>
             </div>
