@@ -3,14 +3,14 @@ import { ExternalLink, Github } from "lucide-react"; // icons
 
 const projects = [
   {
-    title: "StudyWithAI – AI-Powered Study Assistant",
+    title: "Prepzenx – AI-Powered Study Assistant",
     description:
       "An intelligent study assistant using Next.js, Supabase, and Gemini AI that helps students learn via AI-driven chat, quizzes, and summaries. Includes RAG-powered tutoring, gamified quizzes, and an AI dashboard.",
     live: "https://study-tutor-2rc5.vercel.app/",
     github: "https://github.com/mrdv01/StudyTutor",
   },
   {
-    title: "Kitchen Ledger – AI-Powered Inventory Management System",
+    title: "Ledgerly – AI-Powered Inventory Management System",
     description:
       "A full-stack MERN app for managing shared kitchen expenses and inventory. Integrated OCR with Tesseract.js and AI-based parsing to auto-read receipts, plus real-time dashboards and JWT authentication.",
     live: "https://kitchen-ledger-frontend.vercel.app/",
